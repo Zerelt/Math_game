@@ -52,6 +52,6 @@ gulp.task('watch', function() {
   gulp.watch(paths.scripts, ['uglify']);
   gulp.watch(paths.images, ['imagemin']);
 });
-
-gulp.task('default', ['watch', 'minify',
+//commented out watch task so netlify finishes processing
+gulp.task('default', [/*'watch',*/ 'minify',
   'minify-css', 'uglify', 'imagemin']);
