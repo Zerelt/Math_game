@@ -1,0 +1,272 @@
+body {
+  background-color: rgba(0, 0, 0, 0.90);
+  font-family: Helvetica;
+  color: rgba(0, 0, 0, 0.85);
+  background: url('./images/bgwallpaper.jpg')center center fixed no-repeat;
+  /*http://www.localwom.com/i/abstract-math-full-hd-wallpaper.jpg
+    http://hirewallpapers.com/wp-content/uploads/2016/03/math_mathematics_3d_wallpaper_1080p.jpg
+    http://www.wallpaprz.com/wp-content/uploads/2013/11/paper_physics_mathematics_mathematical_formula_formulas_loop_hd_wallpaper.jpg
+    --- http://hirewallpapers.com/wp-content/uploads/2016/03/math_mathematics_formula_wallpaper_hd.jpg
+    http://www.wallpaperup.com/uploads/wallpapers/2013/12/15/196178/007e5fda98b12f717b80eeda0c7baad7.jpg
+    --- http://hitwallpaper.com/wp-content/uploads/2013/07/black-ball-abstract-hd-1080p-hd.jpg
+    http://gambarkerenz.xyz/wp-content/uploads/2016/01/3d-hd-wallpaper-widescreen-cool-3d-hd-wallpapers-images-background.jpg
+    */
+  background-size: cover;
+  padding: 0;
+}
+
+.gameEnd {
+  position: absolute;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(180, 216, 220, 0.5);
+  /*180,216,220, 0.6   132,198,191, 0.6*/
+  z-index: 60000;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: none;
+}
+
+.scoreEnd {
+  position: absolute;
+  width: 100%;
+  height: 30vmin;
+  /*10vmin more than the height of the anouncement itself to have 5vmin extra space top and bottom of the .announcement*/
+  line-height: 1;
+  min-height: 150px;
+  background-color: rgba(255, 127, 80, 0.95);
+  /*(hexcode for coral)*/
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.announcement {
+  text-align: center;
+  color: rgba(0, 0, 0, 0.7);
+  position: relative;
+  height: 20vmin;
+  /*double the height of the font-size so it'll nicely accomodate 2 lines while still being vertically centered*/
+  font-size: 10vmin;
+  padding: 0;
+  width: 100%;
+  position: absolute;
+  margin: auto auto;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+main {
+  height: 90vmin;
+  width: 90vmin;
+  /*
+    max-height:850px;
+    max-width:850px;
+*/
+  background-color: orangered;
+  text-align: center;
+  border-radius: 15px;
+  margin: 0;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  box-shadow: 0px 2px 4px 1px #262626;
+  -webkit-box-shadow: 0px 2px 4px 1px #262626;
+  -moz-box-shadow: 0px 2px 4px 1px #262626;
+}
+
+.verdict {
+  display: inline-block;
+  background-color: aliceblue;
+  color: green;
+  font-size: 3vmin;
+  margin-top: 4%;
+  padding: 10px 15px;
+  border-radius: 3px;
+  box-shadow: 1px 1px 0px 0px #e3e3e3;
+  -webkit-box-shadow: 1px 1px 0px 0px #e3e3e3;
+  -moz-box-shadow: 1px 1px 0px 0px #e3e3e3;
+}
+
+.score {
+  display: inline-block;
+  position: absolute;
+  float: right;
+  background-color: aliceblue;
+  font-size: 3vmin;
+  color: rgba(0, 0, 0, 0.7);
+  padding: 10px 15px;
+  border-radius: 3px;
+  right: 0;
+  margin-top: 4%;
+  margin-right: 20px;
+  box-shadow: 1px 1px 0px 0px lightgrey;
+  -webkit-box-shadow: 1px 1px 0px 0px lightgrey;
+  -moz-box-shadow: 1px 1px 0px 0px lightgrey;
+  display: none;
+}
+
+.quiz {
+  /*    position:absolute;*/
+  width: 80%;
+  background-color: bisque;
+  opacity: 0.85;
+  padding: 15px;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 55%;
+}
+
+.exercise {
+  font-size: 17vmin;
+  margin: 0;
+  background-color: coral;
+  font-family: monospace;
+  /*monospace font not showing in google chrome but showing in firefox windows 11 and windows edge ... browser bug?*/
+}
+
+.req {
+  font-size: 4.5vmin;
+  line-height: 6.5vmin;
+  background-color: brown;
+  padding: 1.5vmin 0px;
+  /*    display:block;*/
+  margin: 2.5vmin 0px;
+}
+
+.answers {
+  position: relative;
+  text-align: justify;
+  display: flex;
+  justify-content: space-between;
+}
+
+.option {
+  height: 14vmin;
+  width: 14vmin;
+  text-align: center;
+  font-size: 7vmin;
+  line-height: 14vmin;
+  vertical-align: middle;
+  background-color: aliceblue;
+  display: inline-block;
+  margin: 0;
+  border-radius: 3px;
+  box-shadow: 0px 1px 4px 1px coral;
+  -webkit-box-shadow: 0px 1px 4px 1px coral;
+  -moz-box-shadow: 0px 1px 4px 1px coral;
+  transition: all 0.1s;
+  -webkit-transition: all 0.1s;
+  -moz-transition: all 0.1s;
+  -o-transition: all 0.1s;
+  -ms-transition: all 0.1s;
+}
+
+.option:active {
+  box-shadow: 0px 0px 0px 0px, inset 0px 1px 15px 1px aliceblue;
+  -webkit-box-shadow: 0px 0px 0px 0px, inset 0px 1px 15px 1px aliceblue;
+  -moz-box-shadow: 0px 0px 0px 0px, inset 0px 1px 15px 1px aliceblue;
+  /*    box-shadow:inset 0px 1px 15px 1px aliceblue;*/
+  margin-top: 4px;
+  background-color: brown;
+  color: aliceblue;
+  transition: all 0.1s;
+  -webkit-transition: all 0.1s;
+  -moz-transition: all 0.1s;
+  -o-transition: all 0.1s;
+  -ms-transition: all 0.1s;
+}
+
+.option:hover,
+.startReset:hover {
+  cursor: pointer;
+}
+
+.startReset {
+  position: absolute;
+  display: inline-block;
+  padding: 0 !important;
+  /*this and the next line below is used to remove the extra spacing that the button adds as padding and its border*/
+  border: 0 none !important;
+  padding: 7px !important;
+  /*    background-color:coral;*/
+  border-radius: 5px;
+  background-color: aliceblue;
+  box-shadow: 0px 2px 4px 1px brown;
+  -webkit-box-shadow: 0px 2px 4px 1px brown;
+  -moz-box-shadow: 0px 2px 4px 1px brown;
+  margin: auto;
+  width: 20vmin;
+  min-width: 150px;
+  margin-bottom: 2.5vmin;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  font-size: 3vmin;
+  color: rgba(0, 0, 0, 0.7);
+  outline: none;
+}
+
+.startReset:active {
+  box-shadow: 0px 0px 0px 0px green;
+  -webkit-box-shadow: 0px 0px 0px 0px green;
+  -moz-box-shadow: 0px 0px 0px 0px green;
+  margin-bottom: 2.4vmin;
+  outline: none;
+}
+
+.countDown {
+  position: absolute;
+  display: inline-block;
+  padding: 7px 15px;
+  background-color: aliceblue;
+  border-radius: 5px;
+  box-shadow: 1px 1px 0px 0px #e3e3e3;
+  -webkit-box-shadow: 1px 1px 0px 0px #e3e3e3;
+  -moz-box-shadow: 1px 1px 0px 0px #e3e3e3;
+  margin-right: 1.5vmin;
+  margin-bottom: 2.5vmin;
+  right: 0;
+  bottom: 0;
+  font-size: 3vmin;
+  color: rgba(0, 0, 0, 0, 7);
+  display: none;
+}
+
+@media screen and (max-width: 460px),
+(max-height: 460px) {
+  .countDown {
+    position: relative;
+    display: block;
+    padding: 10px;
+    background-color: aliceblue;
+    border-radius: 5px;
+    box-shadow: 1px 1px 0px 0px #e3e3e3;
+    -webkit-box-shadow: 1px 1px 0px 0px #e3e3e3;
+    -moz-box-shadow: 1px 1px 0px 0px #e3e3e3;
+    font-size: 3vmin;
+    color: rgba(0, 0, 0, 0.65);
+    margin-top: 4%;
+    margin-right: -100px;
+    /*large enough number to allow the 'Answer' div to be centered margin 0 is not enough,
+    you have to give it a negative dimension bigger than the width it has since it has a position relative,
+    the other divs on that line consider it to be there, so they take into consideration
+    the space that it occupies and move accordingly*/
+    margin-left: 20px;
+    float: left;
+    display: none;
+  }
+}
