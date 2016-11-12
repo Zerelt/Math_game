@@ -263,7 +263,7 @@ main {
     display: none;
 }
 
-@media screen and (max-width: 460px) or (max-height: 460px) {
+@media (max-width: 768px)  {
     .countDown {
         position: relative;
         display: block;
