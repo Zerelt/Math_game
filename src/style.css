@@ -72,7 +72,8 @@ body {
 main {
     height: 90vmin;/*90*/
     width: 90vmin;/*90*/
-    
+    min-width:288px;
+    min-height:288px;
 /*
     max-height:850px;
     max-width:850px;
